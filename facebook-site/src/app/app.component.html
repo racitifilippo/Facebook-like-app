@@ -7,21 +7,48 @@
   <title>Post</title>
 </head>
 <body>
-  <h1 class="text-center">Facebook like App</h1>
+  <h1 class="text-center my-2 title-style">Facebook like App</h1>
 
   
-  <div class="card col-2 m-2">
-    <h4 class="p-2">Add post</h4>
-    <div class="mx-5">
-      <p>Autore:</p>
-      <input type="text" #addAutore id="autore">
+  <div class="container">
+    <div class="row">
+
+      <div class="card col m-2 post-style">
+        <h4 class="pt-2 text-center fs-4">Add post</h4>
+    
+
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Autore" #addAutore id="autore">
+        </div>
+
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Testo" #addTesto id="testo" style="height: 300px"></textarea>
+          <label for="testo" style="color: rgb(110, 117, 124);">Testo</label>
+        </div>
+    
+        <button type="button" (click)="submit_add_post(addAutore, addTesto)" class="btn btn-primary mt-3">Send</button>
+        <br>
+      </div>
+
+
+    
+      <div class="col-9 float-end m-2">
+
+        <app-post *ngFor="let post of posts" [post]="post"></app-post>
+    
+      </div>
+
+
+
+
+
     </div>
-    <div class="mx-5">
-      <p>Testo:</p>
-      <input type="text" #addTesto id="testo">
-    </div>
-    <button type="button" class="btn btn-primary m-3" style="height: 40px;">Send</button>
-    <br>
   </div>
+  
+  
+
+
+  
+
 </body>
 </html>
