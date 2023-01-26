@@ -13,7 +13,7 @@
   <div class="container">
     <div class="row">
 
-      <div class="card col m-2 post-style">
+      <div class="card col m-2 post-style" [style.height.px]="post_height">
         <h4 class="pt-2 text-center fs-4">Add post</h4>
     
 
@@ -21,12 +21,14 @@
           <input type="text" class="form-control" placeholder="Autore" #addAutore id="autore">
         </div>
 
-        <div class="form-floating">
+        <div class="form-floating mb-3">
           <textarea class="form-control" placeholder="Testo" #addTesto id="testo" style="height: 300px"></textarea>
           <label for="testo" style="color: rgb(110, 117, 124);">Testo</label>
         </div>
+
+        <p *ngIf="error_appear" class="text-center text-danger" style="font-weight: bold;">Inserisci tutti i campi</p>
     
-        <button type="button" (click)="submit_add_post(addAutore, addTesto)" class="btn btn-primary mt-3">Send</button>
+        <button type="button" (click)="submit_add_post(addAutore, addTesto)" class="btn btn-success">Send</button>
         <br>
       </div>
 
@@ -34,7 +36,7 @@
     
       <div class="col-9 float-end m-2">
 
-        <app-post *ngFor="let post of posts" [post]="post"></app-post>
+        <app-post *ngFor="let post of sorted_posts()" [post]="post"></app-post>
     
       </div>
 

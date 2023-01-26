@@ -9,9 +9,23 @@ import { Post } from './post.model';
 })
 export class PostComponent {
   @Input() post!: Post;
+  comment_appear:boolean
 
   constructor(){
+    this.comment_appear = false
+  }
 
+
+  add_like(){
+    this.post.add_like()
+  }
+
+  comment_section_appear(){
+    if (this.comment_appear){
+      this.comment_appear = false
+    }else{
+      this.comment_appear = true
+    }
   }
   
   

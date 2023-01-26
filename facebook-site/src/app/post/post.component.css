@@ -1,0 +1,14 @@
+.like-style{
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px solid rgba(0, 0, 0, 0);
+    color: rgb(203, 0, 0);
+}
+
+
+.comment-style{
+    float: right;
+    color: rgb(55, 55, 55);
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px solid rgba(0, 0, 0, 0);
+}
