@@ -20,16 +20,12 @@
     <br *ngIf="comment_appear">
     
     <div class="card" *ngIf="comment_appear">
-        
+
         <div>
-            <p class="p-1">ciao</p>
-            <hr>
-            <p class="p-1">ciao</p>
-            <hr>
-            <p class="p-1">ciao</p>
-            <hr>
-            <p class="p-1">ciao</p>
-            <hr>
+            <div *ngFor="let c of post.commenti" class="card m-2">
+                <p class="px-2 py-1 my-auto">{{c.testo}}</p>
+            </div>
+            
         </div>
 
         <div class="form-floating m-3 mb-0">
@@ -37,9 +33,9 @@
             <label for="commento" style="color: rgb(110, 117, 124);">Scrivi un commento</label>
         </div>
 
-        <!-- <p *ngIf="error_appear" class="text-center text-danger" style="font-weight: bold;">Inserisci tutti i campi</p> -->
-    
-        <button type="button" class="btn btn-primary m-2">Send comment</button>
+        <button (click)="add_comment(addComment)" type="button" class="btn btn-primary m-2">Send comment</button>
+        <p *ngIf="error_appear" class="text-center text-danger mt-2" style="font-weight: bold;">Non puoi inviare commenti vuoti</p>
+        
         
     </div>
 
