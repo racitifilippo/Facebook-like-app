@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post</title>
+</head>
+<body>
+  <h1 class="text-center my-2 title-style">Facebook like App</h1>
+
+  
+  <div class="container">
+    <div class="row">
+
+      <div class="card col m-2 post-style" [style.height.px]="post_height">
+        <h4 class="pt-2 text-center fs-4">Add post</h4>
+    
+
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Autore" #addAutore id="autore">
+        </div>
+
+        <div class="form-floating mb-3">
+          <textarea class="form-control" placeholder="Testo" #addTesto id="testo" style="height: 300px"></textarea>
+          <label for="testo" style="color: rgb(110, 117, 124);">Testo</label>
+        </div>
+
+        <p *ngIf="error_appear" class="text-center text-danger" style="font-weight: bold;">Inserisci tutti i campi</p>
+    
+        <button type="button" (click)="submit_add_post(addAutore, addTesto)" class="btn btn-success">Send</button>
+        <br>
+      </div>
+
+
+    
+      <div class="col-9 float-end m-2">
+
+        <app-post *ngFor="let post of sorted_posts()" [post]="post"></app-post>
+    
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+  
+  
+
+
+  
+
+</body>
+</html>

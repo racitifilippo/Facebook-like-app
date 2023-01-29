@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div>
+    <h3>{{this.post.autore}}</h3>
+    <p>{{this.post.testo}}</p>
+    <!-- <p>{{this.post.like}} 
+        <button class="like-style" (click)="add_like()"><i class="fa fa-heart" style="font-size:16px"></i></button>
+
+    </p> -->
+
+    <div>
+        <p style="float: left;">{{this.post.like}}</p>
+        <button style="float: left;" class="like-style" (click)="add_like()"><i class="fa fa-heart" style="font-size:16px"></i></button>
+        <button (click)="comment_section_appear()" class="comment-style">commenti</button>
+    </div>
+
+
+    <br *ngIf="comment_appear">
+    <br *ngIf="comment_appear">
+    
+    <div class="card" *ngIf="comment_appear">
+
+        <div>
+            <div *ngFor="let c of post.commenti" class="card m-2">
+                <p class="px-2 py-1 my-auto">{{c.testo}}</p>
+            </div>
+            
+        </div>
+
+        <div class="form-floating m-3 mb-0">
+            <textarea class="form-control" placeholder="Scrivi un commento" #addComment id="commento" style="height: 100px"></textarea>
+            <label for="commento" style="color: rgb(110, 117, 124);">Scrivi un commento</label>
+        </div>
+
+        <button (click)="add_comment(addComment)" type="button" class="btn btn-primary m-2">Send comment</button>
+        <p *ngIf="error_appear" class="text-center text-danger mt-2" style="font-weight: bold;">Non puoi inviare commenti vuoti</p>
+        
+        
+    </div>
+
+
+    <br *ngIf="comment_appear == false">
+    <hr>
+</div>
