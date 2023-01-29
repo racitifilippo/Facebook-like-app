@@ -1,7 +1,10 @@
 .post-style{
-    background-color: rgb(255, 240, 240);
+    background-color: rgb(66, 103, 178);
 }
 
 .title-style{
     font-weight: bolder;
+    background-color: rgb(66, 103, 178);
+    padding: 10px;
+    margin: 0px;
 }
