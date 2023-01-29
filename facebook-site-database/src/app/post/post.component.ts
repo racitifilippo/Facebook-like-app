@@ -21,7 +21,7 @@ export class PostComponent {
   add_like_to_db(){
     this.httpClient
     .post<any>(
-      'http://192.168.1.253:8080/add_like',
+      'http://93.48.224.122:8080/add_like',
       // passo tutto perche devo capire a quale post cambiare il numero dei like
       { 
         id: this.post.id,
@@ -42,7 +42,7 @@ export class PostComponent {
   add_comment_to_db(commento: string){
     this.httpClient
     .post<any>(
-      'http://192.168.1.253:8080/add_comment',
+      'http://93.48.224.122:8080/add_comment',
       // passo tutto perche devo capire a quale post cambiare il numero dei like
       { 
         id: this.post.id,

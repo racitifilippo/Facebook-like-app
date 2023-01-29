@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
   refresh_post_from_db(){
     this.httpClient
     .get<any>(
-      'http://192.168.1.253:8080/index'
+      'http://93.48.224.122:8080/index'
       )
     .subscribe( 
       httpResponse => { 
@@ -59,7 +59,7 @@ export class AppComponent implements OnInit {
   add_post_to_db(post: Post){
     this.httpClient
     .post<any>(
-      'http://192.168.1.253:8080/add_post',
+      'http://93.48.224.122:8080/add_post',
       { 
         autorePost: post.autore,
         testoPost: post.testo,

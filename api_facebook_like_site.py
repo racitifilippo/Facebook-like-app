@@ -2,8 +2,8 @@ import json, socket
 import pymongo as pym
 from bson.objectid import ObjectId
 
-from flask_cors import CORS, cross_origin
-from flask import Flask, jsonify, request
+from flask_cors import CORS
+from flask import Flask, request
 app = Flask(__name__)
 cors = CORS(app)
 
