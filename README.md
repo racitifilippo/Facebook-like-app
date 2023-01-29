@@ -7,3 +7,4 @@ L'interazione con il database (MongoDB) viene effettuata attraverso una API. Ess
 Il database è stato creato con docker.
 <br>
 Se si vuole utilizzare l'API bisogna cambiare l'indirizzo ip del database mongoDB e tutti gli indirizzi ip delle richieste get e post che vengono fatte nell'applicazione.
+NON FUNZIONA SU GITPOD perchè a gitpod non piace il mio ip :)
