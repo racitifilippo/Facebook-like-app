@@ -11,4 +11,4 @@ Se si vuole utilizzare l'API bisogna cambiare l'indirizzo ip del database mongoD
 NON FUNZIONA SU GITPOD perchè a gitpod non piace il mio ip :)
 <br>
 <br>
-OPPURE si puo vedere a questo indirizzo: `http://192.168.1.253:8088`
+OPPURE si puo vedere a questo indirizzo: `http://93.48.224.122:8088`
