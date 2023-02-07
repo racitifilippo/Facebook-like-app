@@ -1,0 +1,20 @@
+
+{
+  "_id": {
+    "$oid": "63d6560b0c430f6299827846"
+  },
+  "autorePost": "pippo",
+  "testoPost": "testooo",
+  "like": 0,
+  "commenti": [
+    {
+      "testoCommento": "com1"
+    },
+    {
+      "testoCommento": "com2"
+    },
+    {
+      "testoCommento": "com3"
+    }
+  ]
+}
